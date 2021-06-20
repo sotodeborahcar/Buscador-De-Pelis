@@ -6,67 +6,33 @@
 
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { useHistory } from "react-router-dom";
-import Paper from "@material-ui/core/Paper";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import HomeIcon from "@material-ui/icons/Home";
-import LocalMoviesIcon from "@material-ui/icons/LocalMovies";
-import LiveTvSharpIcon from "@material-ui/icons/LiveTvSharp";
+import { AppBar, Toolbar } from "@material-ui/core";
+import Hidden from "@material-ui/core/Hidden";
+import TabsPanel from "./Home/TabsPanel";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
-    // maxWidth: 1400,
-    backgroundColor: "red",
   },
-});
+  appBar: {
+    backgroundColor: "#01081c",
+  },
+}));
 
 const Navbar = () => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-  const history = useHistory();
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
-    <Paper square className={classes.root}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        variant="fullWidth"
-        indicatorColor="primary"
-        textColor="primary"
-        aria-label="icon tabs"
-      >
-        <Tab
-          className={classes.tabs}
-          onClick={() => {
-            history.push(`/`);
-          }}
-          icon={<HomeIcon />}
-          aria-label="home"
-        />
-        <Tab
-          className={classes.tabs}
-          onClick={() => {
-            history.push(`/movies`);
-          }}
-          icon={<LocalMoviesIcon />}
-          aria-label="movies"
-        />
-        <Tab
-          className={classes.tabs}
-          onClick={() => {
-            history.push(`/series`);
-          }}
-          icon={<LiveTvSharpIcon />}
-          aria-label="series"
-        />
-      </Tabs>
-    </Paper>
+    <div className={classes.root}>
+      <AppBar position="sticky" className={classes.appBar}>
+        <Toolbar>
+          <Hidden lgUp>
+            <TabsPanel />
+          </Hidden>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 };
+
 export default Navbar;
