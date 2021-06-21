@@ -31,6 +31,7 @@ const useStyles = makeStyles(() => ({
       margin: 0,
       padding: 0,
       backgroundColor: "rgb(54,57,63)",
+      boxSizing: "border-box",
     },
   },
   root: {

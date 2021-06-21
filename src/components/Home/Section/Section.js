@@ -1,21 +1,33 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { BiRightArrowCircle } from "react-icons/ri"
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-// import { Card } from "@material-ui/core";
 
 import Card from "./Card";
 
 const useStyles = makeStyles(() => ({
-  root: {
-    display: "flex",
+  rootSection: {
+    maxWidth: 1440,
   },
-  linkTitle: {},
-  titleSection: {},
-  icon: {},
+  containerCards: {
+    display: "flex",
+    alignItems: "flex-start",
+    flexFlow: "row",
+    justifyContent: "flex-start",
+    width: "100%",
+  },
+  linkTitle: {
+    textDecoration: "none",
+  },
+  titleSection: {
+    marginBottom: 30,
+    color: "#ffff",
+  },
+  icon: {
+    fontSize: 30,
+  },
 }));
 
 const Section = ({ title, items, type, media_type }) => {
@@ -23,9 +35,9 @@ const Section = ({ title, items, type, media_type }) => {
   useEffect(() => {}, []);
 
   return (
-    <Container className={classes.root}>
+    <Container className={classes.rootSection}>
       <Link to={`${type}`} className={classes.linkTitle}>
-        <Typography className={classes.titleSection} variant="h2" gutterBottom>
+        <Typography className={classes.titleSection} variant="h3" gutterBottom>
           {title} <ArrowForwardIosIcon className={classes.icon} />
         </Typography>
       </Link>

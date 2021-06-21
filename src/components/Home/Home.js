@@ -1,10 +1,21 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import Section from "./Section/Section";
 import Container from "@material-ui/core/Container";
 
+const useStyles = makeStyles(() => ({
+  rootHome: {
+    maxWidth: 1440,
+    width: "100%",
+    padding: 20,
+  },
+  sectionHome: {},
+}));
+
 const Home = () => {
   const [moviesPopulares, setMoviesPopulares] = useState([]);
+  const classes = useStyles();
 
   useEffect(() => {
     fetch(
@@ -29,8 +40,9 @@ const Home = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className={classes.rootHome}>
       <Section
+        className={classes.sectionHome}
         title="Películas que son tendencia"
         items={moviesPopulares}
         type="/movies/trending"
