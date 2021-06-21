@@ -23,7 +23,7 @@ import SeriesPopulares from "./components/Home/Series/SeriesPopulares";
 import SeriesMejoresCriticas from "./components/Home/Series/SeriesMejoresCriticas";
 import SeriesAire from "./components/Home/Series/SeriesAire";
 
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 const useStyles = makeStyles(() => ({
   "@global": {
@@ -83,7 +83,7 @@ const App = () => {
           <Route exact path="/series/series-aire" component={SeriesAire} />
         </Switch>
 
-        {/* <Footer /> */}
+        <Footer />
         {/* </ThemeProvider> */}
       </BrowserRouter>
     </div>
