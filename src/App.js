@@ -11,17 +11,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 // import Details from "./components/Home/Details/Details";
-// import Movies from "./components/Home/Movies/Movies";
-// import Series from "./components/Home/Series/Series";
+import Movies from "./components/Home/Movies/Movies";
+import Series from "./components/Home/Series/Series";
 
-// import MoviesPopulares from "./components/Home/Movies/MoviesPopulares";
-// import MoviesMejoresCriticas from "./components/Home/Movies/MoviesMejoresCriticas";
-// import MoviesEstrenos from "./components/Home/Movies/MoviesEstrenos";
-// import MoviesCines from "./components/Home/Movies/MoviesCines";
+import MoviesPopulares from "./components/Home/Movies/MoviesPopulares";
+import MoviesMejoresCriticas from "./components/Home/Movies/MoviesMejoresCriticas";
+import MoviesEstrenos from "./components/Home/Movies/MoviesEstrenos";
+import MoviesCines from "./components/Home/Movies/MoviesCines";
 
-// import SeriesPopulares from "./components/Home/Series/SeriesPopulares";
-// import SeriesMejoresCriticas from "./components/Home/Series/SeriesMejoresCriticas";
-// import SeriesCines from "./components/Home/Series/SeriesCines";
+import SeriesPopulares from "./components/Home/Series/SeriesPopulares";
+import SeriesMejoresCriticas from "./components/Home/Series/SeriesMejoresCriticas";
+import SeriesAire from "./components/Home/Series/SeriesAire";
 
 // import Footer from "./components/Footer";
 
@@ -49,9 +49,9 @@ const App = () => {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route exact path="/movies" component={Movies} />
+          <Route exact path="/movies" component={Movies} />
           <Route exact path="/series" component={Series} />
-          <Route exact path="/details/:id" component={Details} />
+          {/* <Route exact path="/details/:id" component={Details} /> */}
 
           <Route
             exact
@@ -80,7 +80,7 @@ const App = () => {
             path="/series/series-mejores-criticas"
             component={SeriesMejoresCriticas}
           />
-          <Route exact path="/series/series-cines" component={SeriesCines} /> */}
+          <Route exact path="/series/series-aire" component={SeriesAire} />
         </Switch>
 
         {/* <Footer /> */}

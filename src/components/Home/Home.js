@@ -23,7 +23,7 @@ const Home = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setMoviesPopulares(data.results.slice(0, 6));
+        setMoviesPopulares(data.results.slice(0, 4));
       });
   }, []);
 
@@ -35,7 +35,7 @@ const Home = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setSeriesPopulares(data.results.slice(0, 6));
+        setSeriesPopulares(data.results.slice(0, 4));
       });
   }, []);
 
