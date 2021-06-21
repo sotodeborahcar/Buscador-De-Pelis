@@ -1,30 +1,37 @@
+//API : d39ce3851046c25726c9bf63898ffa8f
+
+// https://api.themoviedb.org/3/movie/550?api_key=d39ce3851046c25726c9bf63898ffa8f
+
+// TOKEN DE ACCESO DE LECTURA A LA API : eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMzljZTM4NTEwNDZjMjU3MjZjOWJmNjM4OThmZmE4ZiIsInN1YiI6IjYwY2QyMzVlMDc5YTk3MDAzZjg1NDY5MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MIZJk88-HHIMm5F9gqzDN-hLTRJqQUA51dRMpmuwFaw
+
 // import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 // import { ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
-// import Home from "./components/Home/Home";
+import Home from "./components/Home/Home";
 // import Details from "./components/Home/Details/Details";
-// import Movies from "./components/Home/Movies/Movies";
-// import Series from "./components/Home/Series/Series";
+import Movies from "./components/Home/Movies/Movies";
+import Series from "./components/Home/Series/Series";
 
-// import MoviesPopulares from "./components/Home/Movies/MoviesPopulares";
-// import MoviesMejoresCriticas from "./components/Home/Movies/MoviesMejoresCriticas";
-// import MoviesEstrenos from "./components/Home/Movies/MoviesEstrenos";
-// import MoviesCines from "./components/Home/Movies/MoviesCines";
+import MoviesPopulares from "./components/Home/Movies/MoviesPopulares";
+import MoviesMejoresCriticas from "./components/Home/Movies/MoviesMejoresCriticas";
+import MoviesEstrenos from "./components/Home/Movies/MoviesEstrenos";
+import MoviesCines from "./components/Home/Movies/MoviesCines";
 
-// import SeriesPopulares from "./components/Home/Series/SeriesPopulares";
-// import SeriesMejoresCriticas from "./components/Home/Series/SeriesMejoresCriticas";
-// import SeriesCines from "./components/Home/Series/SeriesCines";
+import SeriesPopulares from "./components/Home/Series/SeriesPopulares";
+import SeriesMejoresCriticas from "./components/Home/Series/SeriesMejoresCriticas";
+import SeriesAire from "./components/Home/Series/SeriesAire";
 
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 const useStyles = makeStyles(() => ({
   "@global": {
     body: {
       margin: 0,
       padding: 0,
-      // backgroundColor: "red",
+      backgroundColor: "rgb(54,57,63)",
+      boxSizing: "border-box",
     },
   },
   root: {
@@ -40,11 +47,11 @@ const App = () => {
       <BrowserRouter>
         {/* <ThemeProvider theme={theme}> */}
         <Navbar />
-        {/* <Switch>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/movies" component={Movies} />
           <Route exact path="/series" component={Series} />
-          <Route exact path="/details/:id" component={Details} />
+          {/* <Route exact path="/details/:id" component={Details} /> */}
 
           <Route
             exact
@@ -73,10 +80,10 @@ const App = () => {
             path="/series/series-mejores-criticas"
             component={SeriesMejoresCriticas}
           />
-          <Route exact path="/series/series-cines" component={SeriesCines} />
-        </Switch> */}
+          <Route exact path="/series/series-aire" component={SeriesAire} />
+        </Switch>
 
-        {/* <Footer /> */}
+        <Footer />
         {/* </ThemeProvider> */}
       </BrowserRouter>
     </div>
