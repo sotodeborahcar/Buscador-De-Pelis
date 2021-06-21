@@ -1,9 +1,3 @@
-//API : d39ce3851046c25726c9bf63898ffa8f
-
-// https://api.themoviedb.org/3/movie/550?api_key=d39ce3851046c25726c9bf63898ffa8f
-
-// TOKEN DE ACCESO DE LECTURA A LA API : eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMzljZTM4NTEwNDZjMjU3MjZjOWJmNjM4OThmZmE4ZiIsInN1YiI6IjYwY2QyMzVlMDc5YTk3MDAzZjg1NDY5MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MIZJk88-HHIMm5F9gqzDN-hLTRJqQUA51dRMpmuwFaw
-
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar } from "@material-ui/core";

@@ -1,9 +1,15 @@
+//API : d39ce3851046c25726c9bf63898ffa8f
+
+// https://api.themoviedb.org/3/movie/550?api_key=d39ce3851046c25726c9bf63898ffa8f
+
+// TOKEN DE ACCESO DE LECTURA A LA API : eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMzljZTM4NTEwNDZjMjU3MjZjOWJmNjM4OThmZmE4ZiIsInN1YiI6IjYwY2QyMzVlMDc5YTk3MDAzZjg1NDY5MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MIZJk88-HHIMm5F9gqzDN-hLTRJqQUA51dRMpmuwFaw
+
 // import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 // import { ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
-// import Home from "./components/Home/Home";
+import Home from "./components/Home/Home";
 // import Details from "./components/Home/Details/Details";
 // import Movies from "./components/Home/Movies/Movies";
 // import Series from "./components/Home/Series/Series";
@@ -24,7 +30,7 @@ const useStyles = makeStyles(() => ({
     body: {
       margin: 0,
       padding: 0,
-      // backgroundColor: "red",
+      backgroundColor: "rgb(54,57,63)",
     },
   },
   root: {
@@ -40,9 +46,9 @@ const App = () => {
       <BrowserRouter>
         {/* <ThemeProvider theme={theme}> */}
         <Navbar />
-        {/* <Switch>
+        <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/movies" component={Movies} />
+          {/* <Route exact path="/movies" component={Movies} />
           <Route exact path="/series" component={Series} />
           <Route exact path="/details/:id" component={Details} />
 
@@ -73,8 +79,8 @@ const App = () => {
             path="/series/series-mejores-criticas"
             component={SeriesMejoresCriticas}
           />
-          <Route exact path="/series/series-cines" component={SeriesCines} />
-        </Switch> */}
+          <Route exact path="/series/series-cines" component={SeriesCines} /> */}
+        </Switch>
 
         {/* <Footer /> */}
         {/* </ThemeProvider> */}
