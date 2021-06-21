@@ -9,6 +9,15 @@ const useStyles = makeStyles({
     width: "calc(20%)",
     padding: "0px 4px",
     marginBottom: 20,
+    "@media (max-width : 1200px)": {
+      width: "calc(25% - 6px)",
+    },
+    "@media (max-width : 1000px)": {
+      width: "calc(33% - 6px)",
+    },
+    "@media (max-width : 650px)": {
+      width: "calc(50% - 10px)",
+    },
   },
   cardMedia: {
     margin: "(10px 3px)",
@@ -22,6 +31,11 @@ const useStyles = makeStyles({
     height: "auto",
     transform: "scale(1)",
     opacity: 1,
+  },
+
+  containerCard: {
+    textDecoration: "none",
+    color: "#ffff",
   },
 });
 
@@ -40,7 +54,7 @@ const Card = ({ url, id, subtitle, media_type }) => {
         </CardMedia>
 
         <Typography gutterBottom variant="h5">
-          Lizard
+          {subtitle}
         </Typography>
       </Link>
     </div>

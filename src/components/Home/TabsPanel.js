@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     width: "100%",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.down("md")]: {
       width: "20ch",
     },
   },
@@ -86,7 +86,7 @@ const TabsPanel = () => {
 
   return (
     <Paper square className={classes.root}>
-      <Hidden xsDown>
+      <Hidden smDown>
         <Tabs
           value={value}
           onChange={handleChange}

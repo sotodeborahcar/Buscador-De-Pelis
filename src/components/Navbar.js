@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className={classes.root}>
       <AppBar position="sticky" className={classes.appBar}>
         <Toolbar>
-          <Hidden lgUp>
+          <Hidden xlUp>
             <TabsPanel />
           </Hidden>
         </Toolbar>

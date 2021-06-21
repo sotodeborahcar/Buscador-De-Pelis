@@ -23,7 +23,7 @@ const Home = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setMoviesPopulares(data.results.slice(0, 5));
+        setMoviesPopulares(data.results.slice(0, 6));
       });
   }, []);
 
@@ -35,12 +35,12 @@ const Home = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setSeriesPopulares(data.results.slice(0, 5));
+        setSeriesPopulares(data.results.slice(0, 6));
       });
   }, []);
 
   return (
-    <Container className={classes.rootHome}>
+    <Container wrap="no-wrap" className={classes.rootHome}>
       <Section
         className={classes.sectionHome}
         title="Películas que son tendencia"

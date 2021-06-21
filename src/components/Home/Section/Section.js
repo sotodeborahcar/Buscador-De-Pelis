@@ -14,9 +14,12 @@ const useStyles = makeStyles(() => ({
   containerCards: {
     display: "flex",
     alignItems: "flex-start",
-    flexFlow: "row",
-    justifyContent: "flex-start",
+    // flexFlow: "row wrap",
+    justifyContent: "center",
     width: "100%",
+    "@media (max-width : 1400px)": {
+      flexFlow: "wrap",
+    },
   },
   linkTitle: {
     textDecoration: "none",
@@ -26,7 +29,7 @@ const useStyles = makeStyles(() => ({
     color: "#ffff",
   },
   icon: {
-    fontSize: 30,
+    // fontSize: 30,
   },
 }));
 
@@ -37,7 +40,7 @@ const Section = ({ title, items, type, media_type }) => {
   return (
     <Container className={classes.rootSection}>
       <Link to={`${type}`} className={classes.linkTitle}>
-        <Typography className={classes.titleSection} variant="h3" gutterBottom>
+        <Typography className={classes.titleSection} variant="h4" gutterBottom>
           {title} <ArrowForwardIosIcon className={classes.icon} />
         </Typography>
       </Link>
