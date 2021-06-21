@@ -10,7 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // import { ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
-// import Details from "./components/Home/Details/Details";
+
 import Movies from "./components/Home/Movies/Movies";
 import Series from "./components/Home/Series/Series";
 
@@ -22,6 +22,8 @@ import MoviesCines from "./components/Home/Movies/MoviesCines";
 import SeriesPopulares from "./components/Home/Series/SeriesPopulares";
 import SeriesMejoresCriticas from "./components/Home/Series/SeriesMejoresCriticas";
 import SeriesAire from "./components/Home/Series/SeriesAire";
+
+import Details from "./components/Home/Details/Details";
 
 import Footer from "./components/Footer";
 
@@ -51,7 +53,6 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/movies" component={Movies} />
           <Route exact path="/series" component={Series} />
-          {/* <Route exact path="/details/:id" component={Details} /> */}
 
           <Route
             exact
@@ -81,6 +82,8 @@ const App = () => {
             component={SeriesMejoresCriticas}
           />
           <Route exact path="/series/series-aire" component={SeriesAire} />
+
+          <Route exact path="/details/:id" component={Details} />
         </Switch>
 
         <Footer />
