@@ -1,8 +1,8 @@
-# Buscador de Películas y Series <img src="https://media.giphy.com/media/lOgu1OnjYF2GHBfRU4/giphy.gif" width="60">
+# Buscador de Películas y Series <img src="https://media.giphy.com/media/Lpcaifsui3UMNbwiD1/giphy.gif" width="60">
 
 ## Deploy
 
-[Pagina Web](https://buscador-pelis-y-series.netlify.app/).
+[Pagina Web BUSCADOR PELIS Y SERIES](https://buscador-pelis-y-series.netlify.app/).
 
 # Getting Started with Create React App
 
