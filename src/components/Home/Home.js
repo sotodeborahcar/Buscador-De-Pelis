@@ -6,7 +6,7 @@ import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles(() => ({
   rootHome: {
-    maxWidth: 1440,
+    maxWidth: 1600,
     width: "100%",
     padding: 20,
   },
@@ -45,15 +45,15 @@ const Home = () => {
         className={classes.sectionHome}
         title="Películas que son tendencia"
         items={moviesPopulares}
-        type="/movies/trending"
+        type="/movies/movies-populares"
         media_type="movie"
       />
 
       <Section
         title="Series que son tendencia"
         items={seriesPopulares}
-        type="/movies/trending"
-        media_type="movie"
+        type="/series/series-populares"
+        media_type="tv"
       />
     </Container>
   );
