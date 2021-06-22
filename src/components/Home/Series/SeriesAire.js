@@ -11,8 +11,7 @@ const useStyles = makeStyles(() => ({
   },
   containerCards: {
     display: "flex",
-    alignItems: "flex-start",
-    // flexFlow: "row wrap",
+    flexWrap: "wrap",
     justifyContent: "center",
     width: "100%",
     "@media (max-width : 1400px)": {
