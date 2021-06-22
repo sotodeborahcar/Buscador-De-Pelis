@@ -27,35 +27,36 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const MoviesCines = () => {
-  const [moviesCines, setMoviesCines] = useState([]);
+const SeriesAire = () => {
+  const [seriesAire, setSeriesAire] = useState([]);
   const classes = useStyles();
 
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/now_playing?api_key=d39ce3851046c25726c9bf63898ffa8f"
+      "https://api.themoviedb.org/3/tv/on_the_air?api_key=d39ce3851046c25726c9bf63898ffa8f"
     )
       .then((res) => res.json())
       .then((data) => {
-        setMoviesCines(data.results);
+        setSeriesAire(data.results);
       });
   }, []);
 
   return (
     <Container className={classes.rootSection}>
       <Typography className={classes.titleSection} variant="h4" gutterBottom>
-        Películas en cines
+        Series al aire
       </Typography>
 
       <div className={classes.containerCards}>
-        {moviesCines &&
-          moviesCines.map((cines) => {
+        {seriesAire &&
+          seriesAire.map((aire) => {
             return (
               <Card
-                url={`https://image.tmdb.org/t/p/w370_and_h556_bestv2/${cines.poster_path}`}
-                subtitle={cines.title}
-                key={cines.id}
-                id={cines.id}
+                url={`https://image.tmdb.org/t/p/w370_and_h556_bestv2/${aire.poster_path}`}
+                subtitle={aire.title}
+                key={aire.id}
+                id={aire.id}
+                media_type="tv"
               />
             );
           })}
@@ -63,4 +64,4 @@ const MoviesCines = () => {
     </Container>
   );
 };
-export default MoviesCines;
+export default SeriesAire;

@@ -1,4 +1,4 @@
-# Buscador de Películas y Series
+# Buscador de Películas y Series <img src="https://media.giphy.com/media/lOgu1OnjYF2GHBfRU4/giphy.gif" width="60">
 
 ## Deploy
 
